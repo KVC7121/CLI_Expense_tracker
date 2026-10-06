@@ -98,7 +98,8 @@ This project demonstrates:
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/KVC7121/CLI_Expense_tracker.git
+cd CLI_Expense_tracker
 ```
 
 ### 2. Navigate to the project
