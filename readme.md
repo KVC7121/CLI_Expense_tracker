@@ -21,70 +21,6 @@ This project was created as a practical Python project to apply core programming
 ## Project Structure
 
 ```text
-expense_tracker/
-│
-├── data/
-│   ├── expenses.json
-│   └── expenses.example.json
-│
-├── main.py
-├── models.py
-├── services.py
-├── storage.py
-├── .gitignore
-└── README.md
-```
-
-### `main.py`
-
-Handles the command-line interface and menu.
-
-```text
-User
- ↓
-main.py
- ↓
-services.py
-```
-
-### `models.py`
-
-Contains the `Expense` dataclass.
-
-```python
-@dataclass
-class Expense:
-    id: int
-    amount: float
-    category: str
-    description: str
-    date: str
-```
-
-### `services.py`
-
-Contains the application's business logic:
-
-- Adding expenses
-- Viewing expenses
-- Deleting expenses
-- Searching
-- Category summaries
-- Input validation
-- Clearing expenses
-
-### `storage.py`
-
-Handles persistent storage.
-
-```text
-JSON file → Python Expense objects
-Python Expense objects → JSON file
-```
-
-## Data Flow
-
-```text
                     ┌──────────────┐
                     │   main.py    │
                     │     CLI      │
@@ -124,41 +60,6 @@ When the application starts:
 8. Exit
 ```
 
-## Example
-
-Adding an expense:
-
-```text
-Enter the details of the expense
-
-Amount: 300
-Category: Food
-Description: Lunch
-Date: 10-05-2026
-
-A new expense data is added successfully!
-```
-
-Viewing expenses:
-
-```text
-ID: 1
-Amount: ₹300.0
-Category: Food
-Description: Lunch
-Date: 10-05-2026
-```
-
-Category summary:
-
-```text
-Summary of expenses by category
-
-Food --> ₹1200.0
-Travel --> ₹800.0
-Shopping --> ₹2500.0
-```
-
 ## Error Handling
 
 The application handles common user and storage errors, including:
@@ -184,7 +85,7 @@ This project demonstrates:
 - Modules and imports
 - Dataclasses
 - Object-oriented programming
-- Dunder methods (`__str__`)
+- Dunder methods
 - Type hints
 - File handling
 - JSON serialization/deserialization
